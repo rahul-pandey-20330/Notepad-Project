@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <form action="/create" method ="post">
+                <input class="title" type="text" name="title" placeholder="Title goes here" required>
+                <textarea name="detail" id="discription" placeholder="write your task detail here..."required></textarea>
+                <input class="button" type="submit" value="Create Task">
+            </form>
+        </div>
+        <div class="card">
+            <!-- check files are present in files(tasks) directory or not using if else and forEach loop-->
+            <%if (files.length > 0) {%>
+                <% files.forEach(function(val){%>
+                    <div class="task">
+                        <%=val%><br>
+                        <div class="anchor">
+
+                            <a href="/file/<%= val %>">Read more...</a>
+                        <a class ="edit" href="/edit/<%= val %>">Edit file Name</a>
+                        </div>
+                        
+                    </div> 
+                <%}) %>
+                <%} else {%>
+                    <div class="not_content">
+                        <h3>Not Task Yet</h3>
+                    </div>
+                <%}%>
+            
+        </div>
+    </div>
+</body>
+</html>

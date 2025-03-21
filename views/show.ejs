@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.922);
+            overflow: hidden;
+            color: aliceblue;
+        }
+        body , html{
+            height: 100vh;
+            width: 100vw;
+        }
+        .main{
+            padding: 10px;
+            gap: 2rem;
+            margin: 20px;
+        }
+        a{
+            text-decoration: none;
+            line-height: 2.3rem;
+        }
+        .home{
+            
+            height: 40px;
+            width: 100px;
+            text-align: center;
+            margin-top: 20px;
+            border: 2px solid gray;
+            border-radius: 20px ;
+        }
+        .home:hover{
+            border: 2px solid gray;
+            border-radius: 20px;
+            background-color: ;
+            color: rgba(161, 153, 153, 0.696);
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', sans-serif;
+            text-transform: uppercase;
+            font-size: 200;
+            transform: scale(1.1);
+        }
+        .home:hover::before {
+            transform: scaleX(1);
+         }
+
+        .home:not(:hover) {
+            transform: scale(1);
+        }
+        h1{
+            line-height: 100px;
+            color: lightblue;
+        }
+       p{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.2rem;
+        color: lightblue;
+       }
+    </style>
+</head>
+<body>
+   <div class="main">
+   <div class="home">
+    <a  href="/">
+        Go to Home
+    </a>
+   </div>
+    <div class="detail">
+        <h1 class="title"> <%= filename %></h1>
+        <p class="detail"> <%= detail %> </p>
+    </div>
+   </div>
+</body>
+</html>

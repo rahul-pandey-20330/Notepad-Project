@@ -1,0 +1,116 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.922);
+    overflow: hidden;
+}
+form input,textarea{
+   display: block;
+   background-color: rgba(0, 0, 0, 0.466);
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   height: 40px;
+   width: 100%;
+   margin-top: 10px;
+   color: white;
+  
+}
+textarea{
+    height: 80px;
+    resize: none;
+    overflow-y: hidden;
+}
+.button {
+    position: relative;
+    background: transparent;
+    width: 120px; 
+    height: 45px;
+    color: rgb(103, 99, 99);;
+    font-size: 16px;
+    border: 2px solid #362828;
+    border-radius: 8px; 
+    transition: color 0.4s ease-in-out, transform 0.3s ease-in-out, font-family 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff4c4c;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+.button:hover {
+    color: rgba(161, 153, 153, 0.696);
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 200;
+    transform: scale(1.1);
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button:not(:hover) {
+    transform: scale(1);
+}
+.card{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.task{
+    height: 60px;
+    min-width: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: 2px solid rgb(66, 63, 63);
+    color: rgb(103, 99, 99);
+}
+.task a{
+    text-decoration: none;
+    display: inline-block;
+    line-height: 30px;
+    text-transform: none;
+}
+.not_content{
+    
+    height: 60px;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: 2px solid rgb(66, 63, 63);
+    color: rgb(103, 99, 99);
+}
+.anchor{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-right: 10px;
+}
+.anchor .edit{
+    color: rgb(83, 80, 77);
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    .form{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.922);
+   }
+    form input{
+   display: block;
+   background-color: rgba(0, 0, 0, 0.466);
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   height: 20px;
+   width: 300px;
+   margin-top: 10px;
+   margin-left: 10px;
+   color: white;
+  
+}
+.button {
+    position: relative;
+    background: transparent;
+    width: 120px; 
+    height: 40px;
+    color: rgb(119, 131, 132);
+    font-size: 16px;
+    border: 2px solid #362828;
+    border-radius: 8px; 
+    transition: color 0.4s ease-in-out, transform 0.3s ease-in-out, font-family 0.4s ease-in-out;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff4c4c;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+.button:hover {
+    color: rgba(161, 153, 153, 0.696);
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 180;
+    transform: scale(1.1);
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button:not(:hover) {
+    transform: scale(1);
+}
+.title{
+    color: #766060;
+}
+.home{
+            
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            margin-top: 20px;
+           
+            margin-left: 10px;
+        }
+        .home:hover{
+            color: rgba(161, 153, 153, 0.696);
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', sans-serif;
+            text-transform: uppercase;
+            font-size: 200;
+            transform: scale(1.1);
+        }
+        .home:hover::before {
+            transform: scaleX(1);
+         }
+
+        .home:not(:hover) {
+            transform: scale(1);
+        }
+        a{
+            text-decoration: none;
+            line-height: 2rem;
+            color: #766060;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+
+        <form action="/edit" method="post">
+
+            <input class="title" type="text" name="previous" placeholder="Previous Name" value="<%= filename %>" readonly>
+
+            <input class="title" type="text" name="new" placeholder="New Name" required>
+            <input class="button" type="submit" value="Update Name">
+        </form>
+        <div class="home">
+            <a  href="/">
+                Go to Home
+            </a>
+           </div>
+    </div>
+</body>
+</html>
